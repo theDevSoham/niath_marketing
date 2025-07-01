@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import VisionMission from "@/components/VisionMission";
+import OurServices from "@/components/OurServices";
+import LookingToSellProperty from "@/components/LookingToSellProperty";
 
 export const metadata: Metadata = {};
 
@@ -12,6 +14,8 @@ const App = () => {
       <Navbar />
       <Header />
       <VisionMission />
+      <OurServices />
+      <LookingToSellProperty />
     </div>
   );
 };

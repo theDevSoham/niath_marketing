@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AlignCenter, ArrowRight, X } from "lucide-react";
+import { accent, primary } from "@/constants/colors";
 
 const navLinks = [
   { title: "About Us", link: "#about_us" },
@@ -27,8 +28,7 @@ const Navbar = () => {
   const renderNavContent = (
     mode: "transparent" | "colored" = "transparent"
   ) => {
-    const color = mode === "transparent" ? "fff" : "114455";
-    const anti_color = mode === "transparent" ? "114455" : "fff";
+    const color = mode === "transparent" ? "fff" : primary.split("#")[1];
     return (
       <>
         <div className="lg:w-44 md:w-30 w-20 lg:h-44 md:h-30 h-20">
@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="flex-grow flex xl:hidden justify-end items-center px-4">
           <button
             onClick={() => setDrawerOpen(true)}
-            className={`w-[40px] h-[40px] rounded-md ring-1 flex justify-center items-center ring-[#${color}] focus:ring-3 focus:ring-[#1144557a]`}
+            className={`w-[40px] h-[40px] rounded-md ring-1 flex justify-center items-center ring-[#${color}] focus:ring-3 focus:ring-[${accent}]`}
           >
             <span
               className={`flex justify-center items-center relative z-10 font-medium lg:text-md text-lg text-[#${color}]`}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Sticky Nav (appears after scrolling past 200px) */}
       <nav
-        className={`fixed top-0 left-0 w-full h-[150px] bg-[#114455] z-50 shadow-xl flex justify-between items-center px-4 xl:px-10 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full h-[150px] bg-[#587c88] z-50 shadow-xl flex justify-between items-center px-4 xl:px-10 transition-all duration-300 ${
           showStickyNav
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
@@ -121,7 +121,7 @@ const Navbar = () => {
           />
           <button
             onClick={() => setDrawerOpen(false)}
-            className="text-[#114455] hover:text-red-500"
+            className={`text-[${primary}] hover:text-red-500`}
           >
             <X size={28} />
           </button>
@@ -133,7 +133,7 @@ const Navbar = () => {
               key={index}
               href={item.link}
               onClick={() => setDrawerOpen(false)}
-              className="text-lg font-medium text-[#114455] hover:underline"
+              className={`text-lg font-medium text-[${primary}] hover:underline`}
             >
               {item.title}
             </a>
@@ -141,10 +141,14 @@ const Navbar = () => {
 
           <a
             href="#"
-            className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 ring-4 ring-[#114455] rounded-lg relative group overflow-hidden"
+            className={`mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 ring-4 ring-[${primary}] rounded-lg relative group overflow-hidden`}
           >
-            <span className="absolute inset-0 bg-[#114455] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0"></span>
-            <span className="relative z-10 text-[#114455] group-hover:text-white transition-colors duration-500 flex items-center">
+            <span
+              className={`absolute inset-0 bg-[${primary}] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0`}
+            ></span>
+            <span
+              className={`relative z-10 text-[${primary}] group-hover:text-white transition-colors duration-500 flex items-center`}
+            >
               Let's Talk <ArrowRight className="ml-2" />
             </span>
           </a>

@@ -1,9 +1,10 @@
 import { lexendDeca } from "@/assets/fonts";
+import { primary } from "@/constants/colors";
 
 const VisionMission = () => {
   return (
     <section
-      className={`w-[99vw] h-auto bg-[#114455] flex flex-col justify-center items-center`}
+      className={`w-[99vw] h-auto bg-[${primary}] flex flex-col justify-center items-center`}
     >
       <div className="flex flex-col lg:flex-row gap-10 p-6 lg:p-10">
         <article className="flex-1 flex flex-col gap-2">
