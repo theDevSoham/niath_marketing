@@ -5,11 +5,10 @@ import { AlignCenter, ArrowRight, X } from "lucide-react";
 // import { accent, primary } from "@/constants/colors";
 
 const navLinks = [
-  { title: "About Us", link: "#about_us" },
-  { title: "Vision & Mission", link: "" },
-  { title: "Our Services", link: "" },
-  { title: "Why work with us?", link: "" },
-  { title: "Client Testimonials", link: "" },
+  { title: "Vision & Mission", link: "#vision_mission" },
+  { title: "Our Services", link: "#our_services" },
+  { title: "Why work with us?", link: "#why_work_with_us" },
+  { title: "Client Testimonials", link: "#client_testimonials" },
 ];
 
 const Navbar = () => {
@@ -25,13 +24,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const renderNavContent = (
-    mode: "transparent" | "colored" = "transparent"
-  ) => {
+  const renderNavContent = () => {
     // const color = mode === "transparent" ? "fff" : "#114455".split("#")[1];
     // console.log(mode, color);
 
-    const color = "114455"
+    const color = "114455";
     return (
       <>
         <div className="lg:w-44 md:w-30 w-20 lg:h-44 md:h-30 h-20">
@@ -53,7 +50,8 @@ const Navbar = () => {
           ))}
 
           <a
-            href="#"
+            href="#contact_us"
+            onClick={() => setDrawerOpen(false)}
             className={`relative px-10 py-4 ring-4 ring-[#114455] overflow-hidden group rounded-lg`}
           >
             <span
@@ -62,7 +60,7 @@ const Navbar = () => {
             <span
               className={`flex justify-center items-center relative z-10 font-medium lg:text-md text-lg text-[#114455] transition-colors duration-500 group-hover:text-white`}
             >
-              <span>Let's Talk</span>
+              <span>Let&apos;s Talk</span>
               <ArrowRight />
             </span>
           </a>
@@ -88,7 +86,7 @@ const Navbar = () => {
     <>
       {/* Absolute Nav (initial full-size version) */}
       <nav className="bg-transparent w-full h-[200px] absolute z-40 flex justify-between items-center transition-all duration-300">
-        {renderNavContent("colored")}
+        {renderNavContent()}
       </nav>
 
       {/* Sticky Nav (appears after scrolling past 200px) */}
@@ -99,7 +97,7 @@ const Navbar = () => {
             : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
-        {renderNavContent("colored")}
+        {renderNavContent()}
       </nav>
 
       {/* Drawer Backdrop */}
@@ -111,7 +109,7 @@ const Navbar = () => {
       )}
 
       {/* Drawer */}
-      <div
+      <aside
         className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-white z-65 shadow-lg transition-transform duration-300 ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
@@ -143,7 +141,8 @@ const Navbar = () => {
           ))}
 
           <a
-            href="#"
+            href="#contact_us"
+            onClick={() => setDrawerOpen(false)}
             className={`mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 ring-4 ring-[${"#114455"}] rounded-lg relative group overflow-hidden`}
           >
             <span
@@ -152,11 +151,11 @@ const Navbar = () => {
             <span
               className={`relative z-10 text-[${"#114455"}] group-hover:text-white transition-colors duration-500 flex items-center`}
             >
-              Let's Talk <ArrowRight className="ml-2" />
+              Let&apos;s Talk <ArrowRight className="ml-2" />
             </span>
           </a>
         </div>
-      </div>
+      </aside>
     </>
   );
 };

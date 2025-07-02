@@ -22,7 +22,10 @@ const ClientTestimonials = () => {
   ];
 
   return (
-    <section className="w-[99vw] h-[130vh] lg:h-[100vh] bg-[#587c88] relative">
+    <section
+      id="client_testimonials"
+      className="w-[99vw] h-[150vh] lg:h-[100vh] bg-[#587c88] relative"
+    >
       <div className="absolute w-full h-full z-1">
         <img
           src="images/client_testimonials.webp"
@@ -31,7 +34,7 @@ const ClientTestimonials = () => {
         />
       </div>
       <div className="absolute w-full h-full z-2 bg-black/50 flex flex-col">
-        <div className="flex-1 flex justify-center items-end lg:p-10 px-10 py-0">
+        <div className="flex-1 flex justify-center items-end lg:p-10 px-10 py-6">
           <h2
             className={`${lexendDeca.className} lg:text-6xl text-4xl font-semibold animate-[floatUp_2s_ease-out_forwards]`}
           >

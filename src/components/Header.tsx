@@ -1,4 +1,4 @@
-import { lexendDeca, roboto } from "@/assets/fonts";
+import { lexendDeca } from "@/assets/fonts";
 // import { accent, primary } from "@/constants/colors";
 
 const Header = () => {

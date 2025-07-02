@@ -4,6 +4,7 @@ import { lexendDeca } from "@/assets/fonts";
 const VisionMission = () => {
   return (
     <section
+      id="vision_mission"
       className={`w-[99vw] h-auto bg-[#114455] flex flex-col justify-center items-center`}
     >
       <div className="flex flex-col lg:flex-row gap-10 p-6 lg:p-10">

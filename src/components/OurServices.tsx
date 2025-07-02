@@ -3,7 +3,10 @@ import React from "react";
 
 const OurServices = () => {
   return (
-    <section className="w-[99vw] lg:h-[80vh] h-[70vh] relative flex flex-col justify-center items-center text-black">
+    <section
+      id="our_services"
+      className="w-[99vw] lg:h-[80vh] h-[70vh] relative flex flex-col justify-center items-center text-black"
+    >
       <div className="absolute w-full lg:w-full lg:h-[80vh] h-[70vh] z-1">
         <img
           src="/images/our_services.webp"

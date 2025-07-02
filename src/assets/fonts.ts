@@ -1,4 +1,4 @@
-import { Inter, Lexend_Deca, Radley, Roboto } from "next/font/google";
+import { Lexend_Deca, Roboto } from "next/font/google";
 
 export const roboto = Roboto({
   variable: "--font-roboto",

@@ -1,7 +1,7 @@
 import { IData } from "@/types/CardType";
 import { lexendDeca } from "@/assets/fonts";
 import Card from "./helpers/Card";
-import { secondary } from "@/constants/colors";
+// import { secondary } from "@/constants/colors";
 
 const WhyWorkWithUs = () => {
   const populateArray: IData[] = [
@@ -29,6 +29,7 @@ const WhyWorkWithUs = () => {
 
   return (
     <section
+      id="why_work_with_us"
       className={`w-[99vw] h-auto bg-[#ede9e2] p-6 flex flex-col lg:gap-20 gap-10`}
     >
       <h1
