@@ -6,7 +6,7 @@ import { IData } from "@/types/CardType";
 const Card: React.FC<IData> = ({ title = "", subtitle = "" }) => {
   return (
     <article
-      className={`w-[16rem] lg:w-[20rem] h-[24rem] lg:h-[28rem] flex flex-col justify-center items-center bg-[#323232] hover:bg-[#83a46f] gap-6 rounded-lg`}
+      className={`cursor-pointer w-[16rem] lg:w-[20rem] h-[24rem] lg:h-[28rem] flex flex-col justify-center items-center bg-[#323232] hover:animate-[bgFadeIn_0.5s_ease-out_forwards] gap-6 rounded-lg`}
     >
       <h2
         className={`${lexendDeca.className} lg:text-6xl text-3xl font-semibold text-center`}

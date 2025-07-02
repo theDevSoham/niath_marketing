@@ -6,6 +6,7 @@ import VisionMission from "@/components/VisionMission";
 import OurServices from "@/components/OurServices";
 import LookingToSellProperty from "@/components/LookingToSellProperty";
 import WhyWorkWithUs from "@/components/WhyWorkWithUs";
+import ClientTestimonials from "@/components/ClientTestimonials";
 
 export const metadata: Metadata = {};
 
@@ -18,6 +19,7 @@ const App = () => {
       <OurServices />
       <LookingToSellProperty />
       <WhyWorkWithUs />
+      <ClientTestimonials />
     </div>
   );
 };

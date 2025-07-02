@@ -28,8 +28,10 @@ const Navbar = () => {
   const renderNavContent = (
     mode: "transparent" | "colored" = "transparent"
   ) => {
-    const color = mode === "transparent" ? "fff" : "#114455".split("#")[1];
-    console.log(mode, color);
+    // const color = mode === "transparent" ? "fff" : "#114455".split("#")[1];
+    // console.log(mode, color);
+
+    const color = "114455"
     return (
       <>
         <div className="lg:w-44 md:w-30 w-20 lg:h-44 md:h-30 h-20">
@@ -41,24 +43,24 @@ const Navbar = () => {
             <a
               key={index}
               href={item.link}
-              className={`relative inline-block group font-medium lg:text-xl text-lg text-[#${color}]`}
+              className={`relative inline-block group font-medium lg:text-xl text-lg text-[#114455]`}
             >
               <span className="relative z-6">{item.title}</span>
               <span
-                className={`absolute left-0 bottom-0 h-0.5 w-full bg-[#${color}] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100`}
+                className={`absolute left-0 bottom-0 h-0.5 w-full bg-[#114455] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100`}
               ></span>
             </a>
           ))}
 
           <a
             href="#"
-            className={`relative px-10 py-4 ring-4 ring-[#${color}] overflow-hidden group rounded-lg`}
+            className={`relative px-10 py-4 ring-4 ring-[#114455] overflow-hidden group rounded-lg`}
           >
             <span
-              className={`absolute inset-0 bg-[#${color}] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0`}
+              className={`absolute inset-0 bg-[#114455] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0`}
             ></span>
             <span
-              className={`flex justify-center items-center relative z-10 font-medium lg:text-md text-lg text-[#${color}] transition-colors duration-500 group-hover:text-white`}
+              className={`flex justify-center items-center relative z-10 font-medium lg:text-md text-lg text-[#114455] transition-colors duration-500 group-hover:text-white`}
             >
               <span>Let's Talk</span>
               <ArrowRight />
