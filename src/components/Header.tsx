@@ -1,5 +1,5 @@
 import { lexendDeca, roboto } from "@/assets/fonts";
-import { accent, primary } from "@/constants/colors";
+// import { accent, primary } from "@/constants/colors";
 
 const Header = () => {
   return (
@@ -38,7 +38,7 @@ const Header = () => {
         <div className="animate-[fadeIn_2s_ease-in-out_forwards]">
           <a
             href="#contact_us"
-            className={`${lexendDeca.className} uppercase text-white bg-[${primary}] hover:bg-[${accent}] focus:ring-4 focus:ring-[${accent}] font-medium rounded-lg text-md px-10 lg:px-16 py-4 lg:py-6`}
+            className={`${lexendDeca.className} uppercase text-white bg-[#114455] hover:bg-[#587c88] focus:ring-4 focus:ring-[#587c88] font-medium rounded-lg text-md px-10 lg:px-16 py-4 lg:py-6`}
           >
             Talk to Us
           </a>

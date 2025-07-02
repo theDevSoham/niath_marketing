@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import VisionMission from "@/components/VisionMission";
 import OurServices from "@/components/OurServices";
 import LookingToSellProperty from "@/components/LookingToSellProperty";
+import WhyWorkWithUs from "@/components/WhyWorkWithUs";
 
 export const metadata: Metadata = {};
 
@@ -16,6 +17,7 @@ const App = () => {
       <VisionMission />
       <OurServices />
       <LookingToSellProperty />
+      <WhyWorkWithUs />
     </div>
   );
 };
